@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>JinYoung Lee — Academic Profile</title>
+  <meta name="description" content="I study Graph Neural Networks and Generative Models to efficiently process temporal and spatial dynamics." />
+  <style>
+    :root{
+      --bg: #020b0f; --bg-2: #0a1a22; --card: #0e1e27;
+      --text: #d7fdfd; --muted: #6ecfcf; --accent: #00ffcc; --ring: 0,255,204;
+      --maxw: 960px; --hdr: 64px; --gap: 10px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    html{scroll-behavior:smooth}
+    body{margin:0; font-family: Consolas, Monaco, 'Courier New', monospace; color:var(--text); background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%); overflow-x:hidden}
+    header{position:sticky; top:0; z-index:50; background:rgba(0,0,0,.6); border-bottom:1px solid rgba(0,255,204,.25); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); height:auto; padding-top:calc(6px + env(safe-area-inset-top, 0px)); padding-bottom:6px}
+    .navwrap{max-width:var(--maxw); margin:auto; display:flex; align-items:center; gap:16px; padding: 0 16px}
+    .brand{font-weight:800; font-size:14px; letter-spacing:.12em; color:var(--accent); text-decoration:none; white-space:nowrap}
+    .spacer{flex:1}
+    .topnav{display:flex; align-items:center; gap:var(--gap); flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; white-space:nowrap; scrollbar-width:none; scroll-behavior:auto; scroll-snap-type:x proximity;}
+    .topnav::-webkit-scrollbar{display:none}
+    .topnav a{flex:0 0 auto; color:var(--text); text-decoration:none; padding:8px 10px; border-radius:8px; font-weight:700; border:1px solid rgba(0,255,204,.35); scroll-snap-align:start}
+    .topnav a.active{background:rgba(0,255,204,.18)}
+    main{max-width:var(--maxw); margin:auto; padding:20px 16px 80px}
+    section{scroll-margin-top: 12px}
+    .hero{display:grid; grid-template-columns: 140px 1fr; gap:22px; align-items:center; margin-top:24px}
+    .avatar{width:140px; height:140px; border-radius:999px; border:2px solid rgba(0,255,204,.4); object-fit:cover; background:radial-gradient(60% 60% at 30% 20%, rgba(0,255,204,.18), transparent 60%)}
+    .name{margin:0; font-size: clamp(22px, 4.2vw, 32px)}
+    .title{margin:6px 0 0; color:var(--muted); font-weight:700}
+    .social{display:flex; gap:10px; margin-top:10px}
+    .social a{display:inline-grid; place-items:center; width:36px; height:36px; border-radius:8px; border:1px solid rgba(0,255,204,.35); text-decoration:none; color:var(--text)}
+    .social a:hover{background:rgba(0,255,204,.12)}
+    .card{background:rgba(14,30,39,0.82); border:1px solid rgba(0,255,204,.25); border-radius:12px; padding:18px 18px 14px; margin-top:18px; box-shadow:0 0 20px rgba(0,255,204,.12)}
+    .kicker{font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin:0 0 6px}
+    .list-compact{margin:8px 0 0; padding-left:18px}
+    .list-compact li{margin:6px 0}
+    a{color:#6dfbda}
+    canvas#bgGraph{position:fixed; inset:0; width:100%; height:100%; z-index:0; background:transparent; pointer-events:none; touch-action:none}
+    .bodywrap{position:relative; z-index:1}
+    footer{margin-top:60px; padding:20px; text-align:center; font-size:14px; color:var(--muted); border-top:1px solid rgba(0,255,204,0.2)}
+    @media (max-width: 760px){
+      .hero{grid-template-columns: 1fr; text-align:center}
+      .avatar{margin: 0 auto}
+      .social{justify-content:center}
+      .brand{font-size:12px}
+      .topnav a{padding:6px 8px}
+    }
+  </style>
+</head>
+<body>
+  <canvas id="bgGraph" aria-hidden="true"></canvas>
+  <div class="bodywrap">
+    <header>
+      <div class="navwrap">
+        <a class="brand" href="#about">JINYOUNG LEE</a>
+        <div class="spacer"></div>
+        <nav class="topnav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+		  <a href="#experience">Experience</a>
+		  <a href="#education">Education</a>
+          <a href="#teaching">Teaching</a>
+          <a href="#service">Service</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="about">
+        <div class="hero">
+          <img class="avatar" src="jylee.jpg" alt="Portrait of Jinyoung Lee" onerror="this.src='data:image/svg+xml;utf8,          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect width='100%' height='100%' fill='%230e1e27'/><text x='50%' y='52%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='64' fill='%23d7fdfd'>JL</text></svg>'">
+          <div>
+            <h1 class="name">Jin-Young Lee</h1>
+            <p class="title">Graph Neural Networks · Generative Models · Temporal & Spatial Dynamics</p>
+            <div class="social" aria-label="Social links">
+              <a href="https://github.com/mifa031" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.48v-1.7c-2.78.62-3.37-1.2-3.37-1.2-.46-1.2-1.12-1.53-1.12-1.53-.92-.64.07-.63.07-.63 1.02.07 1.56 1.07 1.56 1.07.9 1.57 2.37 1.12 2.95.85.09-.67.35-1.12.63-1.37-2.22-.26-4.56-1.14-4.56-5.08 0-1.12.39-2.04 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.27 2.76 1.05a9.3 9.3 0 0 1 5.03 0c1.92-1.32 2.76-1.05 2.76-1.05.55 1.42.2 2.47.1 2.73.64.71 1.03 1.63 1.03 2.75 0 3.95-2.34 4.81-4.57 5.07.36.32.69.95.69 1.91v2.83c0 .27.18.6.69.49A10.04 10.04 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/jinyoung-lee-0b0613266" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zM8 8h4.7v2.2h.1c.7-1.2 2.4-2.5 4.9-2.5 5.2 0 6.2 3.4 6.2 7.8V24h-5V16.3c0-1.8 0-4.1-2.5-4.1s-2.9 1.9-2.9 3.9V24H8z"/></svg>
+              </a>
+              <a href="mailto:zby22@txstate.edu" title="Email" aria-label="Email">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 5h18v14H3z"/><path d="M3 7l9 6 9-6"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="pitch.png" alt="" style="width:18px;height:18px;vertical-align:middle;margin-right:8px"><span style="font-size:1.0rem; vertical-align:middle;">Elevator Pitch</span>
+          <p>I study <strong>Graph Neural Networks</strong> and <strong>Generative Models</strong> to efficiently process <strong>Temporal & Spatial Dynamics</strong>, under the supervision of Dr. Chul-Ho Lee.</p>
+		  <p>
+		     I have always believed that science and technology can lead humanity toward a better world, and I have pursued this vision through diverse experiences. I began in Economics, motivated by the idea that accurate forecasting could prevent people from suffering in economic crises. While learning programming for data analysis, I developed a strong interest in information security, and worked as an intern at KEPCO KDN, a Korean public power corporation. Inspired by AlphaGo’s historic matches, I shifted my focus to AI and transferred to the Department of Software at Soongsil University. During an AI course, the Universal Approximation Theorem convinced me of AI’s world-changing capability. I gained industry experience as a machine vision engineer, developing automatic visual inspection systems delivered to factory production lines of companies such as Samsung/LG Display, LG Chem, and Hanwha QCELLS, and later pursued a master’s degree in computer vision, where I conducted several studies, with my main focus on applying time-series forecasting models to video data. Over time, I became increasingly interested in generative models for approximating statistical distributions and in graph algorithms for capturing complex temporal and spatial dynamics. These interests led me to my current doctoral research at Texas State University.
+		  </p>
+        </div>
+      </section>
+      <section id="research" class="card">
+        <p class="kicker" style="margin:0 0 6px;line-height:1.2;white-space:nowrap">
+			<img src="research.png" alt="" style="width:18px;height:18px;vertical-align:middle;margin-right:8px"><span style="font-size:1.0rem; vertical-align:middle;">Research</span>
+		</p> <!--<p class="kicker">Research</p>-->
+		<h2 style="margin:0 0 6px">Areas of Focus</h2>
+        <ul class="list-compact">
+          <li><strong>Graph Generation</strong></li>
+		  <li><strong>Dynamic Graph Modeling</strong></li>
+          <li><strong>Time Series/Spatiotemporal Forecasting</strong></li>
+        </ul>
+        <h2 style="margin:0 0 6px">Research Papers</h2>
+        <ul class="list-compact">
+		  <li><strong>"Segment Anything Model for Anomaly Detection with Lightweight Domain Adapter"</strong>, Y Kim, J Lee, G Kim, ITPM Journal, <em>Jun 2025</em></li>
+          <li><strong>"CNN-Based Time Series Decomposition Model for Video Prediction"</strong>, J Lee, G Kim, IEEE ACCESS, <em>Sep 2024</em></li>
+          <li><strong>"Leveraging Time Series Decomposition for Efficient Spatiotemporal Feature Map Processing to Improve Video Prediction"</strong>, J Lee, Master’s Thesis, <em>Dec 2023</em></li>
+          <li><strong>"Multi-View 3D Human Pose Estimation Based on Transformer"</strong>, S Choi, J Lee, G Kim, Smart Media Journal, <em>Dec 2023</em></li>
+		  <li><strong>"Few-Shot Learning of Tire Defect Image Classification with Deep Learning Model using Triplet Loss"</strong>, J Lee, Y Kim, G Kim, ICROS-KROS joint conference, <em>Dec 2022</em></li>
+		  <li><strong>"A Study on Tire Defect Detection Using Industrial Anomaly Detection Techniques in Unsupervised Learning"</strong>, Y Kim, J Lee, G Kim, ICROS-KROS joint conference, <em>Dec 2022</em></li>
+        </ul>
+      </section>
+      <section id="experience" class="card">
+	  	<p class="kicker" style="margin:0 0 6px;line-height:1.2;white-space:nowrap">
+			<img src="experience.png" alt="" style="width:18px;height:18px;vertical-align:middle;margin-right:8px"><span style="font-size:1.0rem; vertical-align:middle;">Experience</span>
+		</p><!--<p class="kicker">Experience</p>-->
+        <ul class="list-compact">
+          <li><strong>Researcher</strong> at Soongsil University (Computer Vision Lab), <em>Mar 2024 – Feb 2025</em></li>
+          <li><strong>Machine Vision Software Engineer</strong> at FAVION, <em>Oct 2019 – Mar 2021</em></li>
+          <li><strong>Cyber Security Operater Intern</strong> at KEPCO KDN, <em>Jan 2016 – May 2016</em></li>
+        </ul>
+      </section>
+	  <section id="education" class="card">
+	  	<p class="kicker" style="margin:0 0 6px;line-height:1.2;white-space:nowrap">
+			<img src="education.png" alt="" style="width:18px;height:18px;vertical-align:middle;margin-right:8px"><span style="font-size:1.0rem; vertical-align:middle;">Education</span>
+		</p><!--<p class="kicker">Education</p>-->
+	    <ul class="list-compact">
+		  <li><strong>Texas State University</strong> — Ph.D. in Computer Science, <em>Aug 2025 – Present</em></li>
+		  <li><strong>Soongsil University</strong> — M.S. in Software, <em>Mar 2022 - Feb 2024</em></li>
+		  <li><strong>Soongsil University</strong> — B.S. in Software, <em>Mar 2017 - Aug 2019</em></li>
+		  <li><strong>Kyung Hee University</strong> — B.S. in Economics, <em>Mar 2009 - Feb 2016</em></li>
+	    </ul>
+	  </section>
+	  <section id="teaching" class="card">
+	    <p class="kicker" style="margin:0 0 6px;line-height:1.2;white-space:nowrap">
+			<img src="teaching.png" alt="" style="width:18px;height:18px;vertical-align:middle;margin-right:8px"><span style="font-size:1.0rem; vertical-align:middle;">Teaching</span>
+		</p><!--<p class="kicker">Teaching</p>-->
+        <!--<h2 style="margin:0 0 6px">Classes Assisted or Taught</h2>-->
+        <ul class="list-compact">
+          <li><em>Coming soon</em></li>
+        </ul>
+      </section>
+      <section id="service" class="card">
+	  	<p class="kicker" style="margin:0 0 6px;line-height:1.2;white-space:nowrap">
+			<img src="service.png" alt="" style="width:18px;height:18px;vertical-align:middle;margin-right:8px"><span style="font-size:1.0rem; vertical-align:middle;">Service</span>
+		</p><!--<p class="kicker">Service</p>-->
+        <!--<h2 style="margin:0 0 6px">Service</h2>-->
+        <ul class="list-compact">
+          <li><em>Coming soon</em></li>
+        </ul>
+      </section>
+      <section id="contact" class="card">
+        <p class="kicker"><span style="font-size:1.0rem; vertical-align:middle;">Contact</span></p>
+        <h2 style="margin:0 0 6px">Get in touch</h2>
+        <p>Email: <a href="mailto:zby22@txstate.edu" style="color:#6dfbda">zby22@txstate.edu</a></p>
+      </section>
+    </main>
+    <footer>© <span id="year"></span> JinYoung Lee</footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    (function(){var h=document.querySelector('header');function s(){if(h){document.documentElement.style.setProperty('--hdr',h.offsetHeight+'px');}}s();window.addEventListener('load',s,false);window.addEventListener('resize',s,false);window.addEventListener('orientationchange',s,false);})();
+    (function(){var links=document.querySelectorAll('.topnav a');var h=document.querySelector('header');function setA(href){for(var i=0;i<links.length;i++){links[i].classList.toggle('active',links[i].getAttribute('href')===href);}}function go(t){var y=t.getBoundingClientRect().top+(window.pageYOffset||document.documentElement.scrollTop)-(h?h.offsetHeight:0)-6;window.scrollTo({top:y,behavior:'smooth'});}for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(e){var id=this.getAttribute('href');var t=document.querySelector(id);if(t){e.preventDefault();setA(id);go(t);setTimeout(function(){setA(id);},350);}},false);}window.addEventListener('scroll',function(){var best=null,d=1e9;for(var i=0;i<links.length;i++){var id=links[i].getAttribute('href');var s=document.querySelector(id);if(!s)continue;var r=s.getBoundingClientRect();var dd=Math.abs(r.top-(h?h.offsetHeight:0)-6);if(dd<d){d=dd;best=id;}}if(best)setA(best);},{passive:true});if(location.hash){var t=document.querySelector(location.hash);if(t){setA(location.hash);setTimeout(function(){go(t);},50);}}})();
+    (function(){var nav=document.querySelector('.topnav');function reset(){if(nav){nav.scrollLeft=0;}}window.addEventListener('load',function(){requestAnimationFrame(function(){requestAnimationFrame(reset);});},false);window.addEventListener('pageshow',reset,false);window.addEventListener('orientationchange',reset,false);window.addEventListener('resize',function(){if(window.innerWidth<900)reset();},false);})();
+    (function(){var c=document.getElementById('bgGraph');if(!c||!c.getContext)return;var x=c.getContext('2d');window.__raf=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||function(cb){return setTimeout(cb,16)};window.__caf=window.cancelAnimationFrame||window.webkitCancelAnimationFrame||window.mozCancelAnimationFrame||clearTimeout;var nodes=[],id=null;function count(){var a=window.innerWidth*window.innerHeight;return Math.max(24,Math.min(90,Math.floor(a/32000)));}function size(){var d=Math.max(1,Math.min(2,window.devicePixelRatio||1));c.width=Math.floor(window.innerWidth*d);c.height=Math.floor(window.innerHeight*d);c.style.width=window.innerWidth+'px';c.style.height=window.innerHeight+'px';x.setTransform(d,0,0,d,0,0);var n=count();if(nodes.length===0){while(nodes.length<n)nodes.push(newNode());}else if(nodes.length!==n){nodes=nodes.slice(0,n);while(nodes.length<n)nodes.push(newNode());}}function newNode(){var s=(window.innerWidth<480?0.35:0.5);if(s>0.6)s=0.6;if(s<0.25)s=0.25;return {x:Math.random()*window.innerWidth,y:Math.random()*window.innerHeight,vx:(Math.random()-0.5)*s,vy:(Math.random()-0.5)*s};}function loop(){x.fillStyle='rgba(2,11,15,0.12)';x.fillRect(0,0,c.width,c.height);var th=Math.max(90,Math.min(160,Math.floor(Math.min(window.innerWidth,window.innerHeight)/4)));for(var i=0;i<nodes.length;i++){for(var j=i+1;j<nodes.length;j++){var dx=nodes[i].x-nodes[j].x,dy=nodes[i].y-nodes[j].y,ds=Math.sqrt(dx*dx+dy*dy);if(ds<th){x.strokeStyle='rgba(0,255,204,'+(1-ds/th)+')';x.lineWidth=1;x.beginPath();x.moveTo(nodes[i].x,nodes[i].y);x.lineTo(nodes[j].x,nodes[j].y);x.stroke();}}}for(var k=0;k<nodes.length;k++){var n=nodes[k];x.fillStyle='rgba(0,255,204,0.85)';x.beginPath();x.arc(n.x,n.y,2.1,0,Math.PI*2);x.fill();n.x+=n.vx;n.y+=n.vy;if(n.x<0||n.x>window.innerWidth)n.vx*=-1;if(n.y<0||n.y>window.innerHeight)n.vy*=-1;}id=__raf(loop);}function pause(){if(id){__caf(id);id=null;}}function play(){if(!id){id=__raf(loop);}}document.addEventListener('visibilitychange',function(){if(document.hidden)pause();else play();},false);window.addEventListener('resize',size,false);window.addEventListener('orientationchange',size,false);size();play();})();
+  </script>
+</body>
+</html>
